@@ -40,6 +40,7 @@ public class Estrategia4_2 implements EstrategiaBusqueda {
             if (!modificado) throw new Exception("No se ha podido encontrar una solución");
         }
         System.out.println((i++) + " - FIN - " + estadoActual);
+        System.out.println("\n" + "SE ACABO EL PROGRAMA");
         return estadoActual;
     }
 }
