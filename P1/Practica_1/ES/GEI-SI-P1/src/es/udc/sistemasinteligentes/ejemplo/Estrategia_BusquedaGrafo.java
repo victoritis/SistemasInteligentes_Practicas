@@ -17,12 +17,20 @@ public class Estrategia_BusquedaGrafo implements EstrategiaBusqueda {
     public Estrategia_BusquedaGrafo() {
     }
 
+
+    protected Queue<Nodo>  getEstructuraFrontera(){
+
+        return null;
+    }
+
+
+
     @Override
     public Nodo[] soluciona(ProblemaBusqueda p) throws Exception {
         Estado estadoInicial = p.getEstadoInicial();
         Nodo nodoInicial = new Nodo(estadoInicial, null, null);
         ArrayList<Estado> explorados = new ArrayList<Estado>();
-        Queue<Nodo> frontera = new LinkedList<>();
+        Queue<Nodo> frontera = getEstructuraFrontera();
 
         frontera.add(nodoInicial);
 
